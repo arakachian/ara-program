@@ -1,0 +1,5 @@
+carne
+pescado
+milanesa
+frutas
+verduras
