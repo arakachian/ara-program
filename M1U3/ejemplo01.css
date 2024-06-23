@@ -1,0 +1,39 @@
+p{
+    color:blue;
+    font-family: arial;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+h2{
+color: black;
+background-color: aqua;
+text-align: center;
+
+}
+
+h1{
+color: darkmagenta;
+font-style: oblique;
+text-align: center;
+}
+
+.caja{
+width: 200px;
+height: 200px;
+background-color: aqua;
+box-shadow: -3px 21px 28px 4px rgba(0,0,0,1);
+border: 25px ridge rgba(15,12,11,0.93);
+}
+
+.destacados{
+color: chocolate;
+font-style: normal;
+font-weight: 300;
+}
+
+#caja3{
+    width: 500px;
+    height: 200px;
+    background: orange;
+}
