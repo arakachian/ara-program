@@ -4,11 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('dotenv').config();
+
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
-var nosotrosRouter = require('./routes/nosotros'); // nosotros.js
-
 
 var app = express();
 
@@ -23,32 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
-app.use('/nosotros', nosotrosRouter)
-
-
-
-
-/* primer ruta*/
-
-app.get('/prueba1', function(req,res){
-
-res.send('Hola soy la pagina de prueba111')
-
-})
-
-app.get('/prueba7', function(req,res){
-
-  res.send('Hola soy la pagina de prueba777')
-  
-  })
-
-  app.get('/prueba10', function(req,res){
-
-    res.send('Hola soy la pagina de prueba101010')
-    
-    })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
