@@ -48,18 +48,17 @@
     <div id="novedades" class="col-md-5 offset-md-2 scroll_section ">
         <h2>Novedades</h2>
         <ul class="lista-novedades">
-            <li><a href="#" data-bs-toggle="modal" data-bs-target="#modalEjemplo"><img src="img/novedades01.jpg">
-                    Nuevos combos 1</a></li>
-
-            <li><a href="#"><img src="img/novedades01.jpg"> Nuevos combos 2</a></li>
-            <li><a href="#"><img src="img/novedades01.jpg"> Nuevos combos 3</a></li>
-            <li><a href="#"><img src="img/novedades01.jpg"> Nuevos combos 4</a></li>
-            <li><a href="#"><img src="img/novedades01.jpg"> Nuevos combos 5</a></li>
+            {{#each novedades}}
+            <li><a href="#" data-bs-toggle="modal" data-bs-target="#Modal{{id}}"><img src="img/novedades01.jpg">
+                    {{titulo}}</a></li>
+   
+            {{/each}}
         </ul>
     </div>
     <!-- cierro novedades -->
     <!-- inicio modal -->
-    <div class="modal fade" id="modalEjemplo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {{#each novedades}}
+    <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -74,14 +73,16 @@
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
                 <div class="modal-body">
-                    <h3>subtitulo</h3>
-                    <p>cuerpo</p>
+                    <h2>{{titulo}}</h2>
+                    <h3>{{subtitulo}}</h3>
+                    <p>{{cuerpo}}</p>
                 </div>
 
 
             </div>
         </div>
     </div>
+    {{/each}}
     <!-- fin modal -->
     <!-- inicio testimonios -->
     <div class="col-md-3 my-3">
